@@ -1,0 +1,55 @@
+[
+  { "req": "CER", "ans": "CEA", "code": 257, "interfaces": ["all peers"], "spec": "RFC 6733", "summary": "Capabilities-Exchange: negotiates supported applications, security and identities when a Diameter peer connection is established." },
+  { "req": "DWR", "ans": "DWA", "code": 280, "interfaces": ["all peers"], "spec": "RFC 6733", "summary": "Device-Watchdog: heartbeat that detects transport/peer failures when no other traffic is flowing." },
+  { "req": "DPR", "ans": "DPA", "code": 282, "interfaces": ["all peers"], "spec": "RFC 6733", "summary": "Disconnect-Peer: cleanly tears down a peer connection, signalling the disconnect cause." },
+  { "req": "RAR", "ans": "RAA", "code": 258, "interfaces": ["Gx", "Rx", "S9", "Gxx", "S6b"], "spec": "RFC 6733", "summary": "Re-Auth: server-initiated request asking the client to re-authorize/re-authenticate an existing session (e.g. PCRF pushing new rules)." },
+  { "req": "STR", "ans": "STA", "code": 275, "interfaces": ["Rx", "S6b", "SWm", "STa", "S9"], "spec": "RFC 6733", "summary": "Session-Termination: client tells the server a session has ended so accounting/resources can be released." },
+  { "req": "ASR", "ans": "ASA", "code": 274, "interfaces": ["Rx", "S6b", "SWm", "STa"], "spec": "RFC 6733", "summary": "Abort-Session: server-initiated request asking the client to stop a specific session immediately." },
+  { "req": "ACR", "ans": "ACA", "code": 271, "interfaces": ["Rf", "Gz"], "spec": "RFC 6733", "summary": "Accounting: carries offline-charging accounting records (start/interim/stop/event) from a node to the charging system." },
+  { "req": "CCR", "ans": "CCA", "code": 272, "interfaces": ["Gx", "Gy", "Ro", "Gxx", "Sd"], "spec": "RFC 4006", "summary": "Credit-Control: requests/grants units of credit for online charging and policy (Gy quota, Gx policy install)." },
+  { "req": "AAR", "ans": "AAA", "code": 265, "interfaces": ["Rx", "S6b", "SWm", "STa", "SWa"], "spec": "RFC 7155", "summary": "AA (Authentication/Authorization): requests authorization for a session; on Rx the AF (P-CSCF) installs media/QoS info into the PCRF." },
+  { "req": "DER", "ans": "DEA", "code": 268, "interfaces": ["STa", "SWa", "SWm", "SWd"], "spec": "RFC 4072", "summary": "Diameter-EAP: tunnels EAP exchanges for non-3GPP access authentication (trusted/untrusted WLAN)." },
+
+  { "req": "ULR", "ans": "ULA", "code": 316, "interfaces": ["S6a", "S6d"], "spec": "3GPP TS 29.272", "summary": "Update-Location: MME/SGSN registers the UE's serving node with the HSS and downloads subscription data on attach/TAU." },
+  { "req": "CLR", "ans": "CLA", "code": 317, "interfaces": ["S6a", "S6d"], "spec": "3GPP TS 29.272", "summary": "Cancel-Location: HSS tells the old MME/SGSN to delete a subscriber, e.g. after the UE attaches elsewhere." },
+  { "req": "AIR", "ans": "AIA", "code": 318, "interfaces": ["S6a", "S6d"], "spec": "3GPP TS 29.272", "summary": "Authentication-Information: MME/SGSN fetches EPS authentication vectors (RAND/AUTN/XRES/KASME) from the HSS." },
+  { "req": "IDR", "ans": "IDA", "code": 319, "interfaces": ["S6a", "S6d"], "spec": "3GPP TS 29.272", "summary": "Insert-Subscriber-Data: HSS pushes updated subscription data to the MME/SGSN." },
+  { "req": "DSR", "ans": "DSA", "code": 320, "interfaces": ["S6a", "S6d"], "spec": "3GPP TS 29.272", "summary": "Delete-Subscriber-Data: HSS instructs the MME/SGSN to remove specified parts of the stored subscription data." },
+  { "req": "PUR", "ans": "PUA", "code": 321, "interfaces": ["S6a", "S6d"], "spec": "3GPP TS 29.272", "summary": "Purge-UE: MME/SGSN informs the HSS it has flushed a detached/idle subscriber's context." },
+  { "req": "RSR", "ans": "RSA", "code": 322, "interfaces": ["S6a", "S6d"], "spec": "3GPP TS 29.272", "summary": "Reset: HSS notifies MMEs that it has restarted so they re-register affected subscribers." },
+  { "req": "NOR", "ans": "NOA", "code": 323, "interfaces": ["S6a", "S6d"], "spec": "3GPP TS 29.272", "summary": "Notify: MME/SGSN reports events to the HSS (e.g. UE reachable, PDN-GW identity for emergency/UE-requested PDN)." },
+  { "req": "ECR", "ans": "ECA", "code": 324, "interfaces": ["S13", "S13'"], "spec": "3GPP TS 29.272", "summary": "ME-Identity-Check: MME/SGSN checks an IMEI(SV) against the EIR to allow/deny the device (white/grey/black list)." },
+
+  { "req": "UAR", "ans": "UAA", "code": 300, "interfaces": ["Cx", "Dx"], "spec": "3GPP TS 29.229", "summary": "User-Authorization (IMS): I-CSCF asks the HSS whether a user may register and which S-CSCF (or capabilities) to use." },
+  { "req": "SAR", "ans": "SAA", "code": 301, "interfaces": ["Cx", "Dx"], "spec": "3GPP TS 29.229", "summary": "Server-Assignment (IMS): S-CSCF stores/clears its name in the HSS and downloads the user profile on registration." },
+  { "req": "LIR", "ans": "LIA", "code": 302, "interfaces": ["Cx", "Dx"], "spec": "3GPP TS 29.229", "summary": "Location-Info (IMS): I-CSCF queries the HSS for the S-CSCF currently serving a user (for terminating requests)." },
+  { "req": "MAR", "ans": "MAA", "code": 303, "interfaces": ["Cx", "Dx"], "spec": "3GPP TS 29.229", "summary": "Multimedia-Auth (IMS): S-CSCF fetches authentication vectors (e.g. AKA) from the HSS to challenge a registering user." },
+  { "req": "RTR", "ans": "RTA", "code": 304, "interfaces": ["Cx", "Dx"], "spec": "3GPP TS 29.229", "summary": "Registration-Termination (IMS): HSS tells the S-CSCF to deregister a user (admin, re-assignment, etc.)." },
+  { "req": "PPR", "ans": "PPA", "code": 305, "interfaces": ["Cx", "Dx"], "spec": "3GPP TS 29.229", "summary": "Push-Profile (IMS): HSS pushes updated user profile or auth data to the serving S-CSCF." },
+
+  { "req": "UDR", "ans": "UDA", "code": 306, "interfaces": ["Sh", "Dh"], "spec": "3GPP TS 29.329", "summary": "User-Data (Sh): SIP Application Server reads transparent/repository user data from the HSS." },
+  { "req": "PUR", "ans": "PUA", "code": 307, "interfaces": ["Sh", "Dh"], "spec": "3GPP TS 29.329", "summary": "Profile-Update (Sh): Application Server writes updated user data back to the HSS." },
+  { "req": "SNR", "ans": "SNA", "code": 308, "interfaces": ["Sh", "Dh"], "spec": "3GPP TS 29.329", "summary": "Subscribe-Notifications (Sh): Application Server subscribes to be notified when specified HSS user data changes." },
+  { "req": "PNR", "ans": "PNA", "code": 309, "interfaces": ["Sh", "Dh"], "spec": "3GPP TS 29.329", "summary": "Push-Notification (Sh): HSS notifies a subscribed Application Server that user data has changed." },
+
+  { "req": "PLR", "ans": "PLA", "code": 8388620, "interfaces": ["SLg"], "spec": "3GPP TS 29.172", "summary": "Provide-Location (SLg): GMLC requests the current location of a UE from the serving MME (EPC-LCS)." },
+  { "req": "LRR", "ans": "LRA", "code": 8388621, "interfaces": ["SLg"], "spec": "3GPP TS 29.172", "summary": "Location-Report (SLg): MME reports a UE location event/result to the GMLC (deferred or event-triggered)." },
+  { "req": "RIR", "ans": "RIA", "code": 8388622, "interfaces": ["SLh"], "spec": "3GPP TS 29.173", "summary": "LCS-Routing-Info (SLh): GMLC queries the HSS for the serving MME/SGSN of a target UE (LCS routing)." },
+
+  { "req": "SLR", "ans": "SLA", "code": 8388635, "interfaces": ["Sy"], "spec": "3GPP TS 29.219", "summary": "Spending-Limit (Sy): PCRF requests policy counter status (spending limits) from the OCS." },
+  { "req": "SNR", "ans": "SNA", "code": 8388636, "interfaces": ["Sy"], "spec": "3GPP TS 29.219", "summary": "Spending-Status-Notification (Sy): OCS notifies the PCRF when a subscribed policy counter / spending limit changes." },
+
+  { "req": "CIR", "ans": "CIA", "code": 8388718, "interfaces": ["S6t"], "spec": "3GPP TS 29.336", "summary": "Configuration-Information (S6t): SCEF configures monitoring events / communication patterns for a UE in the HSS." },
+  { "req": "RIR", "ans": "RIA", "code": 8388719, "interfaces": ["S6t"], "spec": "3GPP TS 29.336", "summary": "Reporting-Information (S6t): HSS reports monitoring-event data to the SCEF." },
+  { "req": "NIR", "ans": "NIA", "code": 8388726, "interfaces": ["S6t"], "spec": "3GPP TS 29.336", "summary": "NIDD-Information (S6t): authorizes/configures Non-IP Data Delivery for a UE between SCEF and HSS." },
+
+  { "req": "CMR", "ans": "CMA", "code": 8388732, "interfaces": ["T6a", "T6b"], "spec": "3GPP TS 29.128", "summary": "Connection-Management (T6a/T6b): MME/SGSN establishes/updates/releases a NIDD/monitoring connection with the SCEF." },
+  { "req": "ODR", "ans": "ODA", "code": 8388733, "interfaces": ["T6a", "T6b"], "spec": "3GPP TS 29.128", "summary": "MO-Data (T6a/T6b): carries Mobile-Originated Non-IP data from the MME/SGSN to the SCEF." },
+  { "req": "TDR", "ans": "TDA", "code": 8388734, "interfaces": ["T6a", "T6b"], "spec": "3GPP TS 29.128", "summary": "MT-Data (T6a/T6b): carries Mobile-Terminated Non-IP data from the SCEF to the MME/SGSN." },
+
+  { "req": "OFR", "ans": "OFA", "code": 8388645, "interfaces": ["SGd", "Gdd"], "spec": "3GPP TS 29.338", "summary": "MO-Forward-Short-Message (SGd): forwards a Mobile-Originated SMS from the MME/SGSN towards the SMS-GMSC/IWMSC." },
+  { "req": "TFR", "ans": "TFA", "code": 8388646, "interfaces": ["SGd", "Gdd"], "spec": "3GPP TS 29.338", "summary": "MT-Forward-Short-Message (SGd): delivers a Mobile-Terminated SMS from the SMS-GMSC to the serving MME/SGSN." },
+  { "req": "SRR", "ans": "SRA", "code": 8388647, "interfaces": ["S6c"], "spec": "3GPP TS 29.338", "summary": "Send-Routing-Info-for-SM (S6c): SMS-GMSC asks the HSS for the routing info / serving node to deliver an SMS." },
+  { "req": "ALR", "ans": "ALA", "code": 8388648, "interfaces": ["SGd", "S6c"], "spec": "3GPP TS 29.338", "summary": "Alert-Service-Centre (SGd/S6c): tells the SMS service centre that a previously unreachable UE is now available for SMS." },
+  { "req": "RDR", "ans": "RDA", "code": 8388649, "interfaces": ["S6c"], "spec": "3GPP TS 29.338", "summary": "Report-SM-Delivery-Status (S6c): reports SMS delivery outcome to the HSS so it can update message-waiting data." }
+]

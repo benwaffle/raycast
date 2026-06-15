@@ -1,0 +1,5 @@
+# Generated from Wireshark dictionaries by scripts/generate-data.py.
+# Left as the generator emits them so regeneration produces no formatting churn.
+src/data/diameter.json
+src/data/gtp.json
+src/data/avps.json

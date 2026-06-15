@@ -1,0 +1,1040 @@
+[
+  {
+    "category": "Diameter Command",
+    "abbrev": "AAR / AAA",
+    "name": "AA",
+    "code": "265",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Rx",
+      "S6b",
+      "SWm",
+      "STa",
+      "SWa"
+    ],
+    "spec": "RFC 7155",
+    "summary": "AA (Authentication/Authorization): requests authorization for a session; on Rx the AF (P-CSCF) installs media/QoS info into the PCRF.",
+    "related": [
+      "AA-Request",
+      "AA-Answer"
+    ],
+    "keywords": [
+      "AAR",
+      "AAA",
+      "AA",
+      "AA"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "ACR / ACA",
+    "name": "Accounting",
+    "code": "271",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Rf",
+      "Gz"
+    ],
+    "spec": "RFC 6733",
+    "summary": "Accounting: carries offline-charging accounting records (start/interim/stop/event) from a node to the charging system.",
+    "related": [
+      "Accounting-Request",
+      "Accounting-Answer"
+    ],
+    "keywords": [
+      "ACR",
+      "ACA",
+      "Accounting",
+      "Accounting"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "AIR / AIA",
+    "name": "Authentication-Information",
+    "code": "318",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S6a",
+      "S6d"
+    ],
+    "spec": "3GPP TS 29.272",
+    "summary": "Authentication-Information: MME/SGSN fetches EPS authentication vectors (RAND/AUTN/XRES/KASME) from the HSS.",
+    "related": [
+      "Authentication-Information-Request",
+      "Authentication-Information-Answer"
+    ],
+    "keywords": [
+      "AIR",
+      "AIA",
+      "Authentication-Information",
+      "Authentication Information"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "ALR / ALA",
+    "name": "Alert-Service-Centre",
+    "code": "8388648",
+    "protocol": "Diameter",
+    "interfaces": [
+      "SGd",
+      "S6c"
+    ],
+    "spec": "3GPP TS 29.338",
+    "summary": "Alert-Service-Centre (SGd/S6c): tells the SMS service centre that a previously unreachable UE is now available for SMS.",
+    "related": [
+      "Alert-Service-Centre-Request",
+      "Alert-Service-Centre-Answer"
+    ],
+    "keywords": [
+      "ALR",
+      "ALA",
+      "Alert-Service-Centre",
+      "Alert Service Centre"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "ASR / ASA",
+    "name": "Abort-Session",
+    "code": "274",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Rx",
+      "S6b",
+      "SWm",
+      "STa"
+    ],
+    "spec": "RFC 6733",
+    "summary": "Abort-Session: server-initiated request asking the client to stop a specific session immediately.",
+    "related": [
+      "Abort-Session-Request",
+      "Abort-Session-Answer"
+    ],
+    "keywords": [
+      "ASR",
+      "ASA",
+      "Abort-Session",
+      "Abort Session"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "CCR / CCA",
+    "name": "Credit-Control",
+    "code": "272",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Gx",
+      "Gy",
+      "Ro",
+      "Gxx",
+      "Sd"
+    ],
+    "spec": "RFC 4006",
+    "summary": "Credit-Control: requests/grants units of credit for online charging and policy (Gy quota, Gx policy install).",
+    "related": [
+      "Credit-Control-Request",
+      "Credit-Control-Answer"
+    ],
+    "keywords": [
+      "CCR",
+      "CCA",
+      "Credit-Control",
+      "Credit Control"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "CER / CEA",
+    "name": "Capabilities-Exchange",
+    "code": "257",
+    "protocol": "Diameter",
+    "interfaces": [
+      "all peers"
+    ],
+    "spec": "RFC 6733",
+    "summary": "Capabilities-Exchange: negotiates supported applications, security and identities when a Diameter peer connection is established.",
+    "related": [
+      "Capabilities-Exchange-Request",
+      "Capabilities-Exchange-Answer"
+    ],
+    "keywords": [
+      "CER",
+      "CEA",
+      "Capabilities-Exchange",
+      "Capabilities Exchange"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "CIR / CIA",
+    "name": "Configuration-Information",
+    "code": "8388718",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S6t"
+    ],
+    "spec": "3GPP TS 29.336",
+    "summary": "Configuration-Information (S6t): SCEF configures monitoring events / communication patterns for a UE in the HSS.",
+    "related": [
+      "Configuration-Information-Request",
+      "Configuration-Information-Answer"
+    ],
+    "keywords": [
+      "CIR",
+      "CIA",
+      "Configuration-Information",
+      "Configuration Information"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "CLR / CLA",
+    "name": "Cancel-Location",
+    "code": "317",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S6a",
+      "S6d"
+    ],
+    "spec": "3GPP TS 29.272",
+    "summary": "Cancel-Location: HSS tells the old MME/SGSN to delete a subscriber, e.g. after the UE attaches elsewhere.",
+    "related": [
+      "Cancel-Location-Request",
+      "Cancel-Location-Answer"
+    ],
+    "keywords": [
+      "CLR",
+      "CLA",
+      "Cancel-Location",
+      "Cancel Location"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "CMR / CMA",
+    "name": "Connection-Management",
+    "code": "8388732",
+    "protocol": "Diameter",
+    "interfaces": [
+      "T6a",
+      "T6b"
+    ],
+    "spec": "3GPP TS 29.128",
+    "summary": "Connection-Management (T6a/T6b): MME/SGSN establishes/updates/releases a NIDD/monitoring connection with the SCEF.",
+    "related": [
+      "Connection-Management-Request",
+      "Connection-Management-Answer"
+    ],
+    "keywords": [
+      "CMR",
+      "CMA",
+      "Connection-Management",
+      "Connection Management"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "DER / DEA",
+    "name": "Diameter-EAP",
+    "code": "268",
+    "protocol": "Diameter",
+    "interfaces": [
+      "STa",
+      "SWa",
+      "SWm",
+      "SWd"
+    ],
+    "spec": "RFC 4072",
+    "summary": "Diameter-EAP: tunnels EAP exchanges for non-3GPP access authentication (trusted/untrusted WLAN).",
+    "related": [
+      "Diameter-EAP-Request",
+      "Diameter-EAP-Answer"
+    ],
+    "keywords": [
+      "DER",
+      "DEA",
+      "Diameter-EAP",
+      "Diameter EAP"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "DPR / DPA",
+    "name": "Disconnect-Peer",
+    "code": "282",
+    "protocol": "Diameter",
+    "interfaces": [
+      "all peers"
+    ],
+    "spec": "RFC 6733",
+    "summary": "Disconnect-Peer: cleanly tears down a peer connection, signalling the disconnect cause.",
+    "related": [
+      "Disconnect-Peer-Request",
+      "Disconnect-Peer-Answer"
+    ],
+    "keywords": [
+      "DPR",
+      "DPA",
+      "Disconnect-Peer",
+      "Disconnect Peer"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "DSR / DSA",
+    "name": "Delete-Subscriber-Data",
+    "code": "320",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S6a",
+      "S6d"
+    ],
+    "spec": "3GPP TS 29.272",
+    "summary": "Delete-Subscriber-Data: HSS instructs the MME/SGSN to remove specified parts of the stored subscription data.",
+    "related": [
+      "Delete-Subscriber-Data-Request",
+      "Delete-Subscriber-Data-Answer"
+    ],
+    "keywords": [
+      "DSR",
+      "DSA",
+      "Delete-Subscriber-Data",
+      "Delete Subscriber Data"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "DWR / DWA",
+    "name": "Device-Watchdog",
+    "code": "280",
+    "protocol": "Diameter",
+    "interfaces": [
+      "all peers"
+    ],
+    "spec": "RFC 6733",
+    "summary": "Device-Watchdog: heartbeat that detects transport/peer failures when no other traffic is flowing.",
+    "related": [
+      "Device-Watchdog-Request",
+      "Device-Watchdog-Answer"
+    ],
+    "keywords": [
+      "DWR",
+      "DWA",
+      "Device-Watchdog",
+      "Device Watchdog"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "ECR / ECA",
+    "name": "ME-Identity-Check",
+    "code": "324",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S13",
+      "S13'"
+    ],
+    "spec": "3GPP TS 29.272",
+    "summary": "ME-Identity-Check: MME/SGSN checks an IMEI(SV) against the EIR to allow/deny the device (white/grey/black list).",
+    "related": [
+      "ME-Identity-Check-Request",
+      "ME-Identity-Check-Answer"
+    ],
+    "keywords": [
+      "ECR",
+      "ECA",
+      "ME-Identity-Check",
+      "ME Identity Check"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "IDR / IDA",
+    "name": "Insert-Subscriber-Data",
+    "code": "319",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S6a",
+      "S6d"
+    ],
+    "spec": "3GPP TS 29.272",
+    "summary": "Insert-Subscriber-Data: HSS pushes updated subscription data to the MME/SGSN.",
+    "related": [
+      "Insert-Subscriber-Data-Request",
+      "Insert-Subscriber-Data-Answer"
+    ],
+    "keywords": [
+      "IDR",
+      "IDA",
+      "Insert-Subscriber-Data",
+      "Insert Subscriber Data"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "LIR / LIA",
+    "name": "Location-Info",
+    "code": "302",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Cx",
+      "Dx"
+    ],
+    "spec": "3GPP TS 29.229",
+    "summary": "Location-Info (IMS): I-CSCF queries the HSS for the S-CSCF currently serving a user (for terminating requests).",
+    "related": [
+      "Location-Info-Request",
+      "Location-Info-Answer"
+    ],
+    "keywords": [
+      "LIR",
+      "LIA",
+      "Location-Info",
+      "Location Info"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "LRR / LRA",
+    "name": "Location-Report",
+    "code": "8388621",
+    "protocol": "Diameter",
+    "interfaces": [
+      "SLg"
+    ],
+    "spec": "3GPP TS 29.172",
+    "summary": "Location-Report (SLg): MME reports a UE location event/result to the GMLC (deferred or event-triggered).",
+    "related": [
+      "Location-Report-Request",
+      "Location-Report-Answer"
+    ],
+    "keywords": [
+      "LRR",
+      "LRA",
+      "Location-Report",
+      "Location Report"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "MAR / MAA",
+    "name": "Multimedia-Auth",
+    "code": "303",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Cx",
+      "Dx"
+    ],
+    "spec": "3GPP TS 29.229",
+    "summary": "Multimedia-Auth (IMS): S-CSCF fetches authentication vectors (e.g. AKA) from the HSS to challenge a registering user.",
+    "related": [
+      "Multimedia-Auth-Request",
+      "Multimedia-Auth-Answer"
+    ],
+    "keywords": [
+      "MAR",
+      "MAA",
+      "Multimedia-Auth",
+      "Multimedia Auth"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "NIR / NIA",
+    "name": "NIDD-Information",
+    "code": "8388726",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S6t"
+    ],
+    "spec": "3GPP TS 29.336",
+    "summary": "NIDD-Information (S6t): authorizes/configures Non-IP Data Delivery for a UE between SCEF and HSS.",
+    "related": [
+      "NIDD-Information-Request",
+      "NIDD-Information-Answer"
+    ],
+    "keywords": [
+      "NIR",
+      "NIA",
+      "NIDD-Information",
+      "NIDD Information"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "NOR / NOA",
+    "name": "Notify",
+    "code": "323",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S6a",
+      "S6d"
+    ],
+    "spec": "3GPP TS 29.272",
+    "summary": "Notify: MME/SGSN reports events to the HSS (e.g. UE reachable, PDN-GW identity for emergency/UE-requested PDN).",
+    "related": [
+      "Notify-Request",
+      "Notify-Answer"
+    ],
+    "keywords": [
+      "NOR",
+      "NOA",
+      "Notify",
+      "Notify"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "ODR / ODA",
+    "name": "MO-Data",
+    "code": "8388733",
+    "protocol": "Diameter",
+    "interfaces": [
+      "T6a",
+      "T6b"
+    ],
+    "spec": "3GPP TS 29.128",
+    "summary": "MO-Data (T6a/T6b): carries Mobile-Originated Non-IP data from the MME/SGSN to the SCEF.",
+    "related": [
+      "MO-Data-Request",
+      "MO-Data-Answer"
+    ],
+    "keywords": [
+      "ODR",
+      "ODA",
+      "MO-Data",
+      "MO Data"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "OFR / OFA",
+    "name": "MO-Forward-Short-Message",
+    "code": "8388645",
+    "protocol": "Diameter",
+    "interfaces": [
+      "SGd",
+      "Gdd"
+    ],
+    "spec": "3GPP TS 29.338",
+    "summary": "MO-Forward-Short-Message (SGd): forwards a Mobile-Originated SMS from the MME/SGSN towards the SMS-GMSC/IWMSC.",
+    "related": [
+      "MO-Forward-Short-Message-Request",
+      "MO-Forward-Short-Message-Answer"
+    ],
+    "keywords": [
+      "OFR",
+      "OFA",
+      "MO-Forward-Short-Message",
+      "MO Forward Short Message"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "PLR / PLA",
+    "name": "Provide-Location",
+    "code": "8388620",
+    "protocol": "Diameter",
+    "interfaces": [
+      "SLg"
+    ],
+    "spec": "3GPP TS 29.172",
+    "summary": "Provide-Location (SLg): GMLC requests the current location of a UE from the serving MME (EPC-LCS).",
+    "related": [
+      "Provide-Location-Request",
+      "Provide-Location-Answer"
+    ],
+    "keywords": [
+      "PLR",
+      "PLA",
+      "Provide-Location",
+      "Provide Location"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "PNR / PNA",
+    "name": "Push-Notification",
+    "code": "309",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Sh",
+      "Dh"
+    ],
+    "spec": "3GPP TS 29.329",
+    "summary": "Push-Notification (Sh): HSS notifies a subscribed Application Server that user data has changed.",
+    "related": [
+      "Push-Notification-Request",
+      "Push-Notification-Answer"
+    ],
+    "keywords": [
+      "PNR",
+      "PNA",
+      "Push-Notification",
+      "Push Notification"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "PPR / PPA",
+    "name": "Push-Profile",
+    "code": "305",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Cx",
+      "Dx"
+    ],
+    "spec": "3GPP TS 29.229",
+    "summary": "Push-Profile (IMS): HSS pushes updated user profile or auth data to the serving S-CSCF.",
+    "related": [
+      "Push-Profile-Request",
+      "Push-Profile-Answer"
+    ],
+    "keywords": [
+      "PPR",
+      "PPA",
+      "Push-Profile",
+      "Push Profile"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "PUR / PUA",
+    "name": "Purge-UE",
+    "code": "321",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S6a",
+      "S6d"
+    ],
+    "spec": "3GPP TS 29.272",
+    "summary": "Purge-UE: MME/SGSN informs the HSS it has flushed a detached/idle subscriber's context.",
+    "related": [
+      "Purge-UE-Request",
+      "Purge-UE-Answer"
+    ],
+    "keywords": [
+      "PUR",
+      "PUA",
+      "Purge-UE",
+      "Purge UE"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "PUR / PUA",
+    "name": "Profile-Update",
+    "code": "307",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Sh",
+      "Dh"
+    ],
+    "spec": "3GPP TS 29.329",
+    "summary": "Profile-Update (Sh): Application Server writes updated user data back to the HSS.",
+    "related": [
+      "Profile-Update-Request",
+      "Profile-Update-Answer"
+    ],
+    "keywords": [
+      "PUR",
+      "PUA",
+      "Profile-Update",
+      "Profile Update"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "RAR / RAA",
+    "name": "Re-Auth",
+    "code": "258",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Gx",
+      "Rx",
+      "S9",
+      "Gxx",
+      "S6b"
+    ],
+    "spec": "RFC 6733",
+    "summary": "Re-Auth: server-initiated request asking the client to re-authorize/re-authenticate an existing session (e.g. PCRF pushing new rules).",
+    "related": [
+      "Re-Auth-Request",
+      "Re-Auth-Answer"
+    ],
+    "keywords": [
+      "RAR",
+      "RAA",
+      "Re-Auth",
+      "Re Auth"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "RDR / RDA",
+    "name": "Report-SM-Delivery-Status",
+    "code": "8388649",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S6c"
+    ],
+    "spec": "3GPP TS 29.338",
+    "summary": "Report-SM-Delivery-Status (S6c): reports SMS delivery outcome to the HSS so it can update message-waiting data.",
+    "related": [
+      "Report-SM-Delivery-Status-Request",
+      "Report-SM-Delivery-Status-Answer"
+    ],
+    "keywords": [
+      "RDR",
+      "RDA",
+      "Report-SM-Delivery-Status",
+      "Report SM Delivery Status"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "RIR / RIA",
+    "name": "LCS-Routing-Info",
+    "code": "8388622",
+    "protocol": "Diameter",
+    "interfaces": [
+      "SLh"
+    ],
+    "spec": "3GPP TS 29.173",
+    "summary": "LCS-Routing-Info (SLh): GMLC queries the HSS for the serving MME/SGSN of a target UE (LCS routing).",
+    "related": [
+      "LCS-Routing-Info-Request",
+      "LCS-Routing-Info-Answer"
+    ],
+    "keywords": [
+      "RIR",
+      "RIA",
+      "LCS-Routing-Info",
+      "LCS Routing Info"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "RIR / RIA",
+    "name": "Reporting-Information",
+    "code": "8388719",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S6t"
+    ],
+    "spec": "3GPP TS 29.336",
+    "summary": "Reporting-Information (S6t): HSS reports monitoring-event data to the SCEF.",
+    "related": [
+      "Reporting-Information-Request",
+      "Reporting-Information-Answer"
+    ],
+    "keywords": [
+      "RIR",
+      "RIA",
+      "Reporting-Information",
+      "Reporting Information"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "RSR / RSA",
+    "name": "Reset",
+    "code": "322",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S6a",
+      "S6d"
+    ],
+    "spec": "3GPP TS 29.272",
+    "summary": "Reset: HSS notifies MMEs that it has restarted so they re-register affected subscribers.",
+    "related": [
+      "Reset-Request",
+      "Reset-Answer"
+    ],
+    "keywords": [
+      "RSR",
+      "RSA",
+      "Reset",
+      "Reset"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "RTR / RTA",
+    "name": "Registration-Termination",
+    "code": "304",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Cx",
+      "Dx"
+    ],
+    "spec": "3GPP TS 29.229",
+    "summary": "Registration-Termination (IMS): HSS tells the S-CSCF to deregister a user (admin, re-assignment, etc.).",
+    "related": [
+      "Registration-Termination-Request",
+      "Registration-Termination-Answer"
+    ],
+    "keywords": [
+      "RTR",
+      "RTA",
+      "Registration-Termination",
+      "Registration Termination"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "SAR / SAA",
+    "name": "Server-Assignment",
+    "code": "301",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Cx",
+      "Dx"
+    ],
+    "spec": "3GPP TS 29.229",
+    "summary": "Server-Assignment (IMS): S-CSCF stores/clears its name in the HSS and downloads the user profile on registration.",
+    "related": [
+      "Server-Assignment-Request",
+      "Server-Assignment-Answer"
+    ],
+    "keywords": [
+      "SAR",
+      "SAA",
+      "Server-Assignment",
+      "Server Assignment"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "SLR / SLA",
+    "name": "Spending-Limit",
+    "code": "8388635",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Sy"
+    ],
+    "spec": "3GPP TS 29.219",
+    "summary": "Spending-Limit (Sy): PCRF requests policy counter status (spending limits) from the OCS.",
+    "related": [
+      "Spending-Limit-Request",
+      "Spending-Limit-Answer"
+    ],
+    "keywords": [
+      "SLR",
+      "SLA",
+      "Spending-Limit",
+      "Spending Limit"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "SNR / SNA",
+    "name": "Subscribe-Notifications",
+    "code": "308",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Sh",
+      "Dh"
+    ],
+    "spec": "3GPP TS 29.329",
+    "summary": "Subscribe-Notifications (Sh): Application Server subscribes to be notified when specified HSS user data changes.",
+    "related": [
+      "Subscribe-Notifications-Request",
+      "Subscribe-Notifications-Answer"
+    ],
+    "keywords": [
+      "SNR",
+      "SNA",
+      "Subscribe-Notifications",
+      "Subscribe Notifications"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "SNR / SNA",
+    "name": "Spending-Status-Notification",
+    "code": "8388636",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Sy"
+    ],
+    "spec": "3GPP TS 29.219",
+    "summary": "Spending-Status-Notification (Sy): OCS notifies the PCRF when a subscribed policy counter / spending limit changes.",
+    "related": [
+      "Spending-Status-Notification-Request",
+      "Spending-Status-Notification-Answer"
+    ],
+    "keywords": [
+      "SNR",
+      "SNA",
+      "Spending-Status-Notification",
+      "Spending Status Notification"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "SRR / SRA",
+    "name": "Send-Routing-Info-for-SM",
+    "code": "8388647",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S6c"
+    ],
+    "spec": "3GPP TS 29.338",
+    "summary": "Send-Routing-Info-for-SM (S6c): SMS-GMSC asks the HSS for the routing info / serving node to deliver an SMS.",
+    "related": [
+      "Send-Routing-Info-for-SM-Request",
+      "Send-Routing-Info-for-SM-Answer"
+    ],
+    "keywords": [
+      "SRR",
+      "SRA",
+      "Send-Routing-Info-for-SM",
+      "Send Routing Info for SM"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "STR / STA",
+    "name": "Session-Termination",
+    "code": "275",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Rx",
+      "S6b",
+      "SWm",
+      "STa",
+      "S9"
+    ],
+    "spec": "RFC 6733",
+    "summary": "Session-Termination: client tells the server a session has ended so accounting/resources can be released.",
+    "related": [
+      "Session-Termination-Request",
+      "Session-Termination-Answer"
+    ],
+    "keywords": [
+      "STR",
+      "STA",
+      "Session-Termination",
+      "Session Termination"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "TDR / TDA",
+    "name": "MT-Data",
+    "code": "8388734",
+    "protocol": "Diameter",
+    "interfaces": [
+      "T6a",
+      "T6b"
+    ],
+    "spec": "3GPP TS 29.128",
+    "summary": "MT-Data (T6a/T6b): carries Mobile-Terminated Non-IP data from the SCEF to the MME/SGSN.",
+    "related": [
+      "MT-Data-Request",
+      "MT-Data-Answer"
+    ],
+    "keywords": [
+      "TDR",
+      "TDA",
+      "MT-Data",
+      "MT Data"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "TFR / TFA",
+    "name": "MT-Forward-Short-Message",
+    "code": "8388646",
+    "protocol": "Diameter",
+    "interfaces": [
+      "SGd",
+      "Gdd"
+    ],
+    "spec": "3GPP TS 29.338",
+    "summary": "MT-Forward-Short-Message (SGd): delivers a Mobile-Terminated SMS from the SMS-GMSC to the serving MME/SGSN.",
+    "related": [
+      "MT-Forward-Short-Message-Request",
+      "MT-Forward-Short-Message-Answer"
+    ],
+    "keywords": [
+      "TFR",
+      "TFA",
+      "MT-Forward-Short-Message",
+      "MT Forward Short Message"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "UAR / UAA",
+    "name": "User-Authorization",
+    "code": "300",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Cx",
+      "Dx"
+    ],
+    "spec": "3GPP TS 29.229",
+    "summary": "User-Authorization (IMS): I-CSCF asks the HSS whether a user may register and which S-CSCF (or capabilities) to use.",
+    "related": [
+      "User-Authorization-Request",
+      "User-Authorization-Answer"
+    ],
+    "keywords": [
+      "UAR",
+      "UAA",
+      "User-Authorization",
+      "User Authorization"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "UDR / UDA",
+    "name": "User-Data",
+    "code": "306",
+    "protocol": "Diameter",
+    "interfaces": [
+      "Sh",
+      "Dh"
+    ],
+    "spec": "3GPP TS 29.329",
+    "summary": "User-Data (Sh): SIP Application Server reads transparent/repository user data from the HSS.",
+    "related": [
+      "User-Data-Request",
+      "User-Data-Answer"
+    ],
+    "keywords": [
+      "UDR",
+      "UDA",
+      "User-Data",
+      "User Data"
+    ]
+  },
+  {
+    "category": "Diameter Command",
+    "abbrev": "ULR / ULA",
+    "name": "Update-Location",
+    "code": "316",
+    "protocol": "Diameter",
+    "interfaces": [
+      "S6a",
+      "S6d"
+    ],
+    "spec": "3GPP TS 29.272",
+    "summary": "Update-Location: MME/SGSN registers the UE's serving node with the HSS and downloads subscription data on attach/TAU.",
+    "related": [
+      "Update-Location-Request",
+      "Update-Location-Answer"
+    ],
+    "keywords": [
+      "ULR",
+      "ULA",
+      "Update-Location",
+      "Update Location"
+    ]
+  }
+]

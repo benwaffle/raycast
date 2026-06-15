@@ -1,0 +1,827 @@
+[
+  {
+    "category": "Interface",
+    "abbrev": "LTE-Uu",
+    "name": "UE ↔ eNodeB (E-UTRAN air interface)",
+    "family": "4G / EPC",
+    "protocol": "E-UTRA / RRC / NAS",
+    "spec": "3GPP TS 36.300",
+    "summary": "The LTE radio interface between the UE and the eNodeB. Carries RRC signalling and user data; NAS messages to the MME ride transparently over it.",
+    "related": ["S1-MME", "S1-U"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S1-MME",
+    "name": "eNodeB ↔ MME (EPC control plane)",
+    "family": "4G / EPC",
+    "protocol": "S1AP / NAS over SCTP",
+    "spec": "3GPP TS 36.413",
+    "summary": "Control-plane reference point carrying S1-AP (UE context, bearer setup, paging) and tunnelling NAS signalling between the eNodeB and the MME.",
+    "related": ["S1-U", "LTE-Uu", "S11"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S1-U",
+    "name": "eNodeB ↔ Serving GW (EPC user plane)",
+    "family": "4G / EPC",
+    "protocol": "GTP-U over UDP",
+    "spec": "3GPP TS 29.281",
+    "summary": "User-plane reference point that tunnels subscriber packets between the eNodeB and the S-GW per EPS bearer using GTP-U.",
+    "related": ["S1-MME", "S5", "S12"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "X2",
+    "name": "eNodeB ↔ eNodeB",
+    "family": "4G / EPC",
+    "protocol": "X2AP over SCTP",
+    "spec": "3GPP TS 36.423",
+    "summary": "Direct interface between eNodeBs used for handover signalling and interference coordination; user data is forwarded over X2-U (GTP-U).",
+    "related": ["S1-MME"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S3",
+    "name": "MME ↔ S4-SGSN",
+    "family": "4G / EPC",
+    "protocol": "GTP-C",
+    "spec": "3GPP TS 29.274",
+    "summary": "Control-plane interface between MME and SGSN for inter-system (E-UTRAN ↔ UTRAN/GERAN) mobility and context transfer.",
+    "related": ["S4", "S10"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S4",
+    "name": "S4-SGSN ↔ Serving GW",
+    "family": "4G / EPC",
+    "protocol": "GTP-C / GTP-U",
+    "spec": "3GPP TS 29.274",
+    "summary": "Connects a 2G/3G SGSN to the S-GW, giving the legacy packet core access to the EPC user-plane anchor.",
+    "related": ["S3", "S12", "S11"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S5",
+    "name": "Serving GW ↔ PDN GW (intra-PLMN)",
+    "family": "4G / EPC",
+    "protocol": "GTP-C / GTP-U (or PMIPv6)",
+    "spec": "3GPP TS 29.274",
+    "summary": "Core EPS bearer interface between S-GW and P-GW within the same network. The roaming (inter-PLMN) variant is S8.",
+    "related": ["S8", "S11", "SGi"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S8",
+    "name": "Serving GW ↔ PDN GW (inter-PLMN / roaming)",
+    "family": "4G / EPC",
+    "protocol": "GTP-C / GTP-U (or PMIPv6)",
+    "spec": "3GPP TS 29.274",
+    "summary": "Inter-PLMN roaming variant of S5: VPLMN S-GW to HPLMN P-GW for home-routed traffic.",
+    "related": ["S5", "S11"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S6a",
+    "name": "MME ↔ HSS (subscriber data & EPS auth)",
+    "family": "4G / EPC",
+    "protocol": "Diameter (S6a/S6d application)",
+    "spec": "3GPP TS 29.272",
+    "summary": "Diameter interface for location update, subscription-data download and EPS authentication-vector retrieval between MME and HSS. S6d is the SGSN equivalent.",
+    "related": ["S6d", "S13", "SWx", "Cx"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S6d",
+    "name": "S4-SGSN ↔ HSS",
+    "family": "4G / EPC",
+    "protocol": "Diameter (S6a/S6d application)",
+    "spec": "3GPP TS 29.272",
+    "summary": "SGSN-facing counterpart of S6a: same Diameter commands (ULR/AIR/...) for the 2G/3G packet core.",
+    "related": ["S6a"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S9",
+    "name": "H-PCRF ↔ V-PCRF (roaming policy)",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.215",
+    "summary": "Transfers policy and charging control between home and visited PCRFs for roaming scenarios.",
+    "related": ["Gx", "Rx"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S10",
+    "name": "MME ↔ MME",
+    "family": "4G / EPC",
+    "protocol": "GTP-C",
+    "spec": "3GPP TS 29.274",
+    "summary": "Interface between MMEs for MME relocation and UE context transfer during handovers/TAU.",
+    "related": ["S3", "S11"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S11",
+    "name": "MME ↔ Serving GW",
+    "family": "4G / EPC",
+    "protocol": "GTP-C",
+    "spec": "3GPP TS 29.274",
+    "summary": "Control interface where the MME drives the S-GW: create/modify/delete sessions and bearers, downlink data notifications.",
+    "related": ["S1-U", "S5", "S1-MME"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S12",
+    "name": "UTRAN ↔ Serving GW (direct tunnel)",
+    "family": "4G / EPC",
+    "protocol": "GTP-U",
+    "spec": "3GPP TS 29.281",
+    "summary": "Optional direct user-plane tunnel between a 3G RNC and the S-GW (one-tunnel / direct-tunnel architecture).",
+    "related": ["S4", "S1-U"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S13",
+    "name": "MME ↔ EIR (IMEI check)",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.272",
+    "summary": "Lets the MME check a device's IMEI(SV) against the Equipment Identity Register (ECR/ECA). S13' is the SGSN variant.",
+    "related": ["S6a"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "SGi",
+    "name": "PDN GW ↔ Packet Data Network",
+    "family": "4G / EPC",
+    "protocol": "IP",
+    "spec": "3GPP TS 29.061",
+    "summary": "The reference point between the P-GW and an external PDN (internet, IMS, corporate). 5G's equivalent is N6.",
+    "related": ["S5", "N6"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "SGs",
+    "name": "MME ↔ MSC/VLR (CS fallback / SMS)",
+    "family": "4G / EPC",
+    "protocol": "SGsAP over SCTP",
+    "spec": "3GPP TS 29.118",
+    "summary": "Connects the MME to the CS-domain MSC/VLR for circuit-switched fallback and SMS-over-SGs.",
+    "related": ["SGd"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "SBc",
+    "name": "MME ↔ CBC (public warning)",
+    "family": "4G / EPC",
+    "protocol": "SBc-AP over SCTP",
+    "spec": "3GPP TS 29.168",
+    "summary": "Carries warning messages (ETWS/CMAS public warning system) from the Cell Broadcast Centre to MMEs.",
+    "related": []
+  },
+  {
+    "category": "Interface",
+    "abbrev": "SLs",
+    "name": "MME ↔ E-SMLC (positioning)",
+    "family": "4G / EPC",
+    "protocol": "LCS-AP over SCTP",
+    "spec": "3GPP TS 29.171",
+    "summary": "Used for LTE positioning procedures between the MME and the Evolved Serving Mobile Location Centre.",
+    "related": ["SLg", "SLh"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "SLg",
+    "name": "MME ↔ GMLC (location services)",
+    "family": "4G / EPC",
+    "protocol": "Diameter (EPC-LCS)",
+    "spec": "3GPP TS 29.172",
+    "summary": "GMLC requests UE location from the MME (PLR/PLA) and receives location reports (LRR/LRA).",
+    "related": ["SLh", "SLs"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "SLh",
+    "name": "GMLC ↔ HSS (LCS routing)",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.173",
+    "summary": "GMLC queries the HSS for the serving MME/SGSN of a target UE before invoking SLg (RIR/RIA).",
+    "related": ["SLg"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Gx",
+    "name": "PCRF ↔ PCEF (PDN GW)",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.212",
+    "summary": "Installs PCC rules and reports usage/events between the PCRF and the policy-enforcement function in the P-GW (CCR/CCA, RAR/RAA).",
+    "related": ["Rx", "Gy", "Sd", "Gxx"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Gxx",
+    "name": "PCRF ↔ BBERF (Gxa/Gxc)",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.212",
+    "summary": "Policy control toward a bearer-binding-and-event-reporting function in a serving gateway / trusted access (Gxa, Gxc).",
+    "related": ["Gx"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Sd",
+    "name": "PCRF ↔ TDF",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.212",
+    "summary": "Controls a Traffic Detection Function for application detection and control under PCRF policy.",
+    "related": ["Gx"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Gy",
+    "name": "PDN GW (CTF) ↔ OCS (online charging)",
+    "family": "4G / EPC",
+    "protocol": "Diameter Credit-Control",
+    "spec": "3GPP TS 32.299",
+    "summary": "Real-time online charging / quota management between the P-GW and the Online Charging System (CCR/CCA).",
+    "related": ["Ro", "Gz", "Gx"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Gz",
+    "name": "PDN GW ↔ OFCS (offline charging)",
+    "family": "4G / EPC",
+    "protocol": "Diameter (Rf) / GTP'",
+    "spec": "3GPP TS 32.295",
+    "summary": "Carries offline charging records (CDRs) from the P-GW to the Offline Charging System.",
+    "related": ["Rf", "Gy"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Rx",
+    "name": "AF (P-CSCF) ↔ PCRF",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.214",
+    "summary": "Application Function provides session/media information (e.g. VoLTE codecs) to the PCRF so dynamic QoS can be installed (AAR/AAA, STR, ASR, RAR).",
+    "related": ["Gx", "Gm"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "SGd",
+    "name": "MME/SGSN ↔ SMS-GMSC (SMS over Diameter)",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.338",
+    "summary": "Diameter-based SMS delivery between the serving node and the SMS centre (OFR/TFR/ALR), replacing the legacy MAP path.",
+    "related": ["S6c", "SGs"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S6c",
+    "name": "SMS-GMSC ↔ HSS (SMS routing)",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.338",
+    "summary": "Used by the SMS centre to retrieve SMS routing information from the HSS (SRR/SRA, RDR/RDA).",
+    "related": ["SGd"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S6t",
+    "name": "SCEF ↔ HSS (IoT exposure)",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.336",
+    "summary": "Configures monitoring events, communication patterns and NIDD authorization for cellular-IoT devices (CIR/CIA, RIR/RIA, NIR/NIA).",
+    "related": ["T6a"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "T6a",
+    "name": "MME ↔ SCEF (NIDD / monitoring)",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.128",
+    "summary": "Carries Non-IP Data Delivery and monitoring-event reporting between the serving MME and the SCEF (CMR, ODR, TDR). T6b is the SGSN variant.",
+    "related": ["S6t"]
+  },
+
+  {
+    "category": "Interface",
+    "abbrev": "Gn",
+    "name": "SGSN ↔ GGSN (intra-PLMN, legacy)",
+    "family": "2G / 3G",
+    "protocol": "GTPv1-C / GTP-U",
+    "spec": "3GPP TS 29.060",
+    "summary": "Classic GPRS tunnelling interface between SGSN and GGSN within one network (Create/Update/Delete PDP Context). Gp is the inter-PLMN variant.",
+    "related": ["Gp", "Gi", "S4"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Gp",
+    "name": "SGSN ↔ GGSN (inter-PLMN, roaming)",
+    "family": "2G / 3G",
+    "protocol": "GTPv1-C / GTP-U",
+    "spec": "3GPP TS 29.060",
+    "summary": "Roaming variant of Gn across PLMN boundaries.",
+    "related": ["Gn"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Gi",
+    "name": "GGSN ↔ Packet Data Network",
+    "family": "2G / 3G",
+    "protocol": "IP",
+    "spec": "3GPP TS 29.061",
+    "summary": "Reference point between the GGSN and external packet data networks (the 3G analogue of SGi).",
+    "related": ["Gn", "SGi"]
+  },
+
+  {
+    "category": "Interface",
+    "abbrev": "S2a",
+    "name": "Trusted non-3GPP access ↔ PDN GW",
+    "family": "4G / EPC",
+    "protocol": "PMIPv6 / GTP / MIPv4",
+    "spec": "3GPP TS 29.275",
+    "summary": "Connects trusted non-3GPP access (e.g. trusted WLAN / TWAG) to the P-GW for mobility anchoring.",
+    "related": ["S2b", "STa"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S2b",
+    "name": "ePDG ↔ PDN GW",
+    "family": "4G / EPC",
+    "protocol": "PMIPv6 / GTP",
+    "spec": "3GPP TS 29.275",
+    "summary": "Anchors untrusted non-3GPP (WiFi-calling via ePDG) sessions to the P-GW.",
+    "related": ["SWu", "SWm", "S2a"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "S2c",
+    "name": "UE ↔ PDN GW (DSMIPv6)",
+    "family": "4G / EPC",
+    "protocol": "DSMIPv6",
+    "spec": "3GPP TS 24.303",
+    "summary": "Host-based mobility (Dual-Stack Mobile IPv6) directly between the UE and the P-GW.",
+    "related": ["S2a", "S2b"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "SWu",
+    "name": "UE ↔ ePDG",
+    "family": "4G / EPC",
+    "protocol": "IKEv2 / IPsec",
+    "spec": "3GPP TS 24.302",
+    "summary": "The IPsec tunnel a UE sets up to the ePDG over untrusted access (e.g. WiFi calling).",
+    "related": ["S2b", "SWm"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "SWm",
+    "name": "ePDG ↔ 3GPP AAA",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.273",
+    "summary": "Authentication/authorization and tunnel parameters for untrusted non-3GPP access (DER/DEA, AAR, STR, ASR).",
+    "related": ["SWx", "STa", "S2b"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "SWa",
+    "name": "Untrusted non-3GPP access ↔ 3GPP AAA",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.273",
+    "summary": "Authenticates and authorizes the untrusted non-3GPP access network with the 3GPP AAA server.",
+    "related": ["STa", "SWm"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "STa",
+    "name": "Trusted non-3GPP access ↔ 3GPP AAA",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.273",
+    "summary": "Authentication/authorization (EAP-AKA') for trusted non-3GPP access to the EPC.",
+    "related": ["SWa", "S2a"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "SWx",
+    "name": "3GPP AAA ↔ HSS",
+    "family": "4G / EPC",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.273",
+    "summary": "Retrieves authentication data and subscriber profile, and registers the AAA server, for non-3GPP access (MAR/MAA, SAR, PPR, RTR).",
+    "related": ["S6a", "SWm"]
+  },
+
+  {
+    "category": "Interface",
+    "abbrev": "Gm",
+    "name": "UE ↔ P-CSCF (IMS)",
+    "family": "IMS",
+    "protocol": "SIP",
+    "spec": "3GPP TS 24.229",
+    "summary": "The SIP signalling interface between the IMS UE and its Proxy-CSCF (registration, calls).",
+    "related": ["Mw", "Rx"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Mw",
+    "name": "CSCF ↔ CSCF (IMS)",
+    "family": "IMS",
+    "protocol": "SIP",
+    "spec": "3GPP TS 24.229",
+    "summary": "SIP interface between CSCFs (P/I/S-CSCF) for routing IMS sessions.",
+    "related": ["Gm", "ISC"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "ISC",
+    "name": "S-CSCF ↔ Application Server (IMS)",
+    "family": "IMS",
+    "protocol": "SIP",
+    "spec": "3GPP TS 24.229",
+    "summary": "IP Multimedia Service Control: invokes application servers (e.g. TAS for VoLTE supplementary services) via initial filter criteria.",
+    "related": ["Sh", "Mw"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Cx",
+    "name": "I/S-CSCF ↔ HSS (IMS)",
+    "family": "IMS",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.229",
+    "summary": "Registration, S-CSCF assignment, user-profile download and IMS authentication (UAR, SAR, LIR, MAR). Dx is the SLF-routed variant.",
+    "related": ["Dx", "Sh", "SWx"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Dx",
+    "name": "I/S-CSCF ↔ SLF (IMS)",
+    "family": "IMS",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.229",
+    "summary": "Used with a Subscription Locator Function to find the right HSS in multi-HSS deployments; carries the same Cx commands.",
+    "related": ["Cx"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Sh",
+    "name": "SIP AS ↔ HSS (IMS)",
+    "family": "IMS",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.329",
+    "summary": "Lets application servers read/write transparent and repository user data and subscribe to changes (UDR, PUR, SNR, PNR). Dh is the SLF variant.",
+    "related": ["Dh", "Cx", "ISC"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Dh",
+    "name": "SIP AS ↔ SLF (IMS)",
+    "family": "IMS",
+    "protocol": "Diameter",
+    "spec": "3GPP TS 29.329",
+    "summary": "SLF-routed variant of Sh for locating the correct HSS.",
+    "related": ["Sh"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Rf",
+    "name": "CTF ↔ CDF (offline charging)",
+    "family": "IMS",
+    "protocol": "Diameter (ACR/ACA)",
+    "spec": "3GPP TS 32.299",
+    "summary": "Offline charging: network elements send accounting records to the Charging Data Function.",
+    "related": ["Ro", "Gz"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Ro",
+    "name": "CTF ↔ OCS (online charging)",
+    "family": "IMS",
+    "protocol": "Diameter Credit-Control",
+    "spec": "3GPP TS 32.299",
+    "summary": "Online charging for IMS/services using Diameter Credit-Control toward the OCS.",
+    "related": ["Gy", "Rf"]
+  },
+
+  {
+    "category": "Interface",
+    "abbrev": "N1",
+    "name": "UE ↔ AMF",
+    "family": "5G Core",
+    "protocol": "5G NAS",
+    "spec": "3GPP TS 23.501",
+    "summary": "Logical NAS signalling reference point between the UE and the AMF (registration, connection and mobility management); transported transparently over N2.",
+    "related": ["N2", "N11"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N2",
+    "name": "(R)AN ↔ AMF",
+    "family": "5G Core",
+    "protocol": "NGAP over SCTP",
+    "spec": "3GPP TS 38.413",
+    "summary": "Control-plane reference point between the gNB/ng-eNB and the AMF (NG-AP: UE context, PDU session resource setup, paging).",
+    "related": ["N1", "N3"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N3",
+    "name": "(R)AN ↔ UPF",
+    "family": "5G Core",
+    "protocol": "GTP-U",
+    "spec": "3GPP TS 29.281",
+    "summary": "User-plane tunnel carrying subscriber packets between the RAN and the UPF (5G equivalent of S1-U).",
+    "related": ["N9", "N6", "N4"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N4",
+    "name": "SMF ↔ UPF",
+    "family": "5G Core",
+    "protocol": "PFCP",
+    "spec": "3GPP TS 29.244",
+    "summary": "The SMF programs the UPF (packet detection, forwarding, QoS and usage-reporting rules) using PFCP — the CUPS control/user-plane split.",
+    "related": ["N3", "N9"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N6",
+    "name": "UPF ↔ Data Network (DN)",
+    "family": "5G Core",
+    "protocol": "IP",
+    "spec": "3GPP TS 23.501",
+    "summary": "Reference point between the UPF and an external data network (internet, IMS, edge). The 5G counterpart of EPC's SGi.",
+    "related": ["N3", "SGi", "N9"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N9",
+    "name": "UPF ↔ UPF",
+    "family": "5G Core",
+    "protocol": "GTP-U",
+    "spec": "3GPP TS 29.281",
+    "summary": "User-plane tunnel between two UPFs (e.g. I-UPF and anchor UPF, or home-routed roaming).",
+    "related": ["N3", "N6"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N5",
+    "name": "PCF ↔ AF",
+    "family": "5G Core",
+    "protocol": "Service-based (HTTP/2)",
+    "spec": "3GPP TS 23.501",
+    "summary": "Reference point letting an Application Function influence policy/traffic; realized over the Npcf service (5G analogue of Rx).",
+    "related": ["N7", "Rx"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N7",
+    "name": "SMF ↔ PCF",
+    "family": "5G Core",
+    "protocol": "Service-based (HTTP/2)",
+    "spec": "3GPP TS 29.512",
+    "summary": "Session management policy control: SMF retrieves PCC rules from the PCF (5G analogue of Gx).",
+    "related": ["N5", "N15", "Gx"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N8",
+    "name": "AMF ↔ UDM",
+    "family": "5G Core",
+    "protocol": "Service-based (HTTP/2)",
+    "spec": "3GPP TS 23.501",
+    "summary": "AMF retrieves access & mobility subscription data and registers with the UDM.",
+    "related": ["N10", "N13"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N10",
+    "name": "SMF ↔ UDM",
+    "family": "5G Core",
+    "protocol": "Service-based (HTTP/2)",
+    "spec": "3GPP TS 23.501",
+    "summary": "SMF retrieves session-management subscription data and registers the serving SMF with the UDM.",
+    "related": ["N8", "N11"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N11",
+    "name": "AMF ↔ SMF",
+    "family": "5G Core",
+    "protocol": "Service-based (HTTP/2)",
+    "spec": "3GPP TS 29.502",
+    "summary": "AMF requests PDU session create/update/release at the SMF; relays N1 SM and N2 SM containers.",
+    "related": ["N1", "N2", "N16"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N12",
+    "name": "AMF ↔ AUSF",
+    "family": "5G Core",
+    "protocol": "Service-based (HTTP/2)",
+    "spec": "3GPP TS 29.509",
+    "summary": "Primary authentication: AMF invokes the AUSF to run 5G-AKA / EAP-AKA'.",
+    "related": ["N13", "N8"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N13",
+    "name": "UDM ↔ AUSF",
+    "family": "5G Core",
+    "protocol": "Service-based (HTTP/2)",
+    "spec": "3GPP TS 23.501",
+    "summary": "AUSF obtains authentication vectors / generates authentication data from the UDM/ARPF.",
+    "related": ["N12", "N8"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N14",
+    "name": "AMF ↔ AMF",
+    "family": "5G Core",
+    "protocol": "Service-based (HTTP/2)",
+    "spec": "3GPP TS 23.501",
+    "summary": "AMF-to-AMF for UE context transfer during AMF relocation / mobility (5G analogue of S10).",
+    "related": ["N11"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N15",
+    "name": "AMF ↔ PCF",
+    "family": "5G Core",
+    "protocol": "Service-based (HTTP/2)",
+    "spec": "3GPP TS 23.501",
+    "summary": "Access and mobility policy control (AM policy, UE policy) between AMF and PCF.",
+    "related": ["N7", "N5"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N16",
+    "name": "SMF ↔ SMF",
+    "family": "5G Core",
+    "protocol": "Service-based (HTTP/2)",
+    "spec": "3GPP TS 29.502",
+    "summary": "SMF-to-SMF for home-routed roaming (H-SMF / V-SMF) and SMF relocation.",
+    "related": ["N11", "N9"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N17",
+    "name": "AMF ↔ 5G-EIR",
+    "family": "5G Core",
+    "protocol": "Service-based (HTTP/2)",
+    "spec": "3GPP TS 23.501",
+    "summary": "Equipment identity (PEI/IMEI) check against the 5G Equipment Identity Register (5G analogue of S13).",
+    "related": ["S13"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N22",
+    "name": "AMF ↔ NSSF",
+    "family": "5G Core",
+    "protocol": "Service-based (HTTP/2)",
+    "spec": "3GPP TS 23.501",
+    "summary": "Network slice selection: AMF asks the NSSF for the allowed/served NSSAI and target AMF set.",
+    "related": ["N12"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N26",
+    "name": "AMF ↔ MME (EPS interworking)",
+    "family": "5G Core",
+    "protocol": "GTP-C",
+    "spec": "3GPP TS 29.274",
+    "summary": "Optional interface enabling seamless EPS ↔ 5GS handover with single-registration interworking between the AMF and MME.",
+    "related": ["S10", "N2"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N32",
+    "name": "SEPP ↔ SEPP (roaming)",
+    "family": "5G Core",
+    "protocol": "HTTP/2 (PRINS / TLS)",
+    "spec": "3GPP TS 29.573",
+    "summary": "Secured inter-PLMN interface between Security Edge Protection Proxies for 5G roaming signalling.",
+    "related": ["N33"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "N33",
+    "name": "NEF ↔ AF",
+    "family": "5G Core",
+    "protocol": "Service-based (HTTP/2)",
+    "spec": "3GPP TS 29.522",
+    "summary": "Northbound API exposure: the NEF exposes 5GC capabilities (monitoring, QoS, NIDD) to external Application Functions.",
+    "related": ["N5"]
+  },
+
+  {
+    "category": "Interface",
+    "abbrev": "Namf",
+    "name": "AMF service-based interface",
+    "family": "5G SBI",
+    "protocol": "HTTP/2 + JSON (OpenAPI)",
+    "spec": "3GPP TS 29.518",
+    "summary": "The AMF's service-based interface (communication, event-exposure, MT, location services) consumed by other NFs over the SBA bus.",
+    "related": ["N1", "N2", "N11"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Nsmf",
+    "name": "SMF service-based interface",
+    "family": "5G SBI",
+    "protocol": "HTTP/2 + JSON (OpenAPI)",
+    "spec": "3GPP TS 29.502",
+    "summary": "The SMF's service-based interface for PDU session management and event exposure.",
+    "related": ["N11", "N7", "N4"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Nudm",
+    "name": "UDM service-based interface",
+    "family": "5G SBI",
+    "protocol": "HTTP/2 + JSON (OpenAPI)",
+    "spec": "3GPP TS 29.503",
+    "summary": "The UDM's service-based interface (subscriber data management, UE context management, authentication-data generation).",
+    "related": ["N8", "N10", "N13"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Nausf",
+    "name": "AUSF service-based interface",
+    "family": "5G SBI",
+    "protocol": "HTTP/2 + JSON (OpenAPI)",
+    "spec": "3GPP TS 29.509",
+    "summary": "The AUSF's service-based interface for UE authentication.",
+    "related": ["N12", "N13"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Npcf",
+    "name": "PCF service-based interface",
+    "family": "5G SBI",
+    "protocol": "HTTP/2 + JSON (OpenAPI)",
+    "spec": "3GPP TS 29.507",
+    "summary": "The PCF's service-based interface for AM/SM/UE policy control and policy authorization.",
+    "related": ["N7", "N15", "N5"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Nnrf",
+    "name": "NRF service-based interface",
+    "family": "5G SBI",
+    "protocol": "HTTP/2 + JSON (OpenAPI)",
+    "spec": "3GPP TS 29.510",
+    "summary": "The NRF's service-based interface for NF registration, discovery and access-token (OAuth2) services.",
+    "related": []
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Nnssf",
+    "name": "NSSF service-based interface",
+    "family": "5G SBI",
+    "protocol": "HTTP/2 + JSON (OpenAPI)",
+    "spec": "3GPP TS 29.531",
+    "summary": "The NSSF's service-based interface for network slice selection.",
+    "related": ["N22"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Nudr",
+    "name": "UDR service-based interface",
+    "family": "5G SBI",
+    "protocol": "HTTP/2 + JSON (OpenAPI)",
+    "spec": "3GPP TS 29.504",
+    "summary": "The UDR's service-based interface used by UDM/PCF/NEF to read/write stored subscription, policy and exposure data.",
+    "related": ["Nudm", "Npcf"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Nnef",
+    "name": "NEF service-based interface",
+    "family": "5G SBI",
+    "protocol": "HTTP/2 + JSON (OpenAPI)",
+    "spec": "3GPP TS 29.522",
+    "summary": "The NEF's service-based interface exposing 5GC capabilities to AFs and storing data via the UDR.",
+    "related": ["N33"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Nchf",
+    "name": "CHF service-based interface",
+    "family": "5G SBI",
+    "protocol": "HTTP/2 + JSON (OpenAPI)",
+    "spec": "3GPP TS 32.291",
+    "summary": "The Charging Function's service-based interface for converged online/offline charging (Nchf_ConvergedCharging).",
+    "related": ["Ro", "Gy"]
+  }
+]

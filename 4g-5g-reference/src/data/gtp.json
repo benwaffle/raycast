@@ -1,0 +1,1628 @@
+[
+  {
+    "abbrev": "EM",
+    "name": "End Marker",
+    "code": "254",
+    "protocol": "GTP-U",
+    "interfaces": [],
+    "spec": "3GPP TS 29.281",
+    "related": [],
+    "keywords": [
+      "EM",
+      "End Marker"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "TP",
+    "name": "T-PDU",
+    "code": "255",
+    "protocol": "GTP-U",
+    "interfaces": [],
+    "spec": "3GPP TS 29.281",
+    "related": [],
+    "keywords": [
+      "TP",
+      "T-PDU"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "CPCR",
+    "name": "Create PDP context request / response",
+    "code": "16 / 17",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Create PDP context request",
+      "Create PDP context response"
+    ],
+    "keywords": [
+      "CPCR",
+      "CPCR",
+      "Create PDP context request",
+      "Create PDP context response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "DAPCR",
+    "name": "Delete AA PDP Context Request / Response",
+    "code": "24 / 25",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Delete AA PDP Context Request",
+      "Delete AA PDP Context Response"
+    ],
+    "keywords": [
+      "DAPCR",
+      "DAPCR",
+      "Delete AA PDP Context Request",
+      "Delete AA PDP Context Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "DPCR",
+    "name": "Delete PDP context request / response",
+    "code": "20 / 21",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Delete PDP context request",
+      "Delete PDP context response"
+    ],
+    "keywords": [
+      "DPCR",
+      "DPCR",
+      "Delete PDP context request",
+      "Delete PDP context response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "DRTR",
+    "name": "Data record transfer request / response",
+    "code": "240 / 241",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Data record transfer request",
+      "Data record transfer response"
+    ],
+    "keywords": [
+      "DRTR",
+      "DRTR",
+      "Data record transfer request",
+      "Data record transfer response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "EI",
+    "name": "Error indication",
+    "code": "26",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [],
+    "keywords": [
+      "EI",
+      "Error indication"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "ER",
+    "name": "Echo request / response",
+    "code": "1 / 2",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Echo request",
+      "Echo response"
+    ],
+    "keywords": [
+      "ER",
+      "ER",
+      "Echo request",
+      "Echo response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "FRC",
+    "name": "Forward relocation complete",
+    "code": "55",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [],
+    "keywords": [
+      "FRC",
+      "Forward relocation complete"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "FRCA",
+    "name": "Forward relocation complete acknowledge",
+    "code": "59",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [],
+    "keywords": [
+      "FRCA",
+      "Forward relocation complete acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "FRR",
+    "name": "Failure report request / response",
+    "code": "34 / 35",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Failure report request",
+      "Failure report response"
+    ],
+    "keywords": [
+      "FRR",
+      "FRR",
+      "Failure report request",
+      "Failure report response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "FRR",
+    "name": "Forward relocation request / response",
+    "code": "53 / 54",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Forward relocation request",
+      "Forward relocation response"
+    ],
+    "keywords": [
+      "FRR",
+      "FRR",
+      "Forward relocation request",
+      "Forward relocation response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "FSC",
+    "name": "Forward SRNS context",
+    "code": "58",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [],
+    "keywords": [
+      "FSC",
+      "Forward SRNS context"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "FSCA",
+    "name": "Forward SRNS context acknowledge",
+    "code": "60",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [],
+    "keywords": [
+      "FSCA",
+      "Forward SRNS context acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "IPCAR",
+    "name": "Initiate PDP Context Activation Request / Response",
+    "code": "22 / 23",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Initiate PDP Context Activation Request",
+      "Initiate PDP Context Activation Response"
+    ],
+    "keywords": [
+      "IPCAR",
+      "IPCAR",
+      "Initiate PDP Context Activation Request",
+      "Initiate PDP Context Activation Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "IR",
+    "name": "Identification request / response",
+    "code": "48 / 49",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Identification request",
+      "Identification response"
+    ],
+    "keywords": [
+      "IR",
+      "IR",
+      "Identification request",
+      "Identification response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "NAR",
+    "name": "Node alive request / response",
+    "code": "4 / 5",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Node alive request",
+      "Node alive response"
+    ],
+    "keywords": [
+      "NAR",
+      "NAR",
+      "Node alive request",
+      "Node alive response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "NMGPR",
+    "name": "Note MS GPRS present request / response",
+    "code": "36 / 37",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Note MS GPRS present request",
+      "Note MS GPRS present response"
+    ],
+    "keywords": [
+      "NMGPR",
+      "NMGPR",
+      "Note MS GPRS present request",
+      "Note MS GPRS present response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "PNR",
+    "name": "PDU notification request / response",
+    "code": "27 / 28",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "PDU notification request",
+      "PDU notification response"
+    ],
+    "keywords": [
+      "PNR",
+      "PNR",
+      "PDU notification request",
+      "PDU notification response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "PNRR",
+    "name": "PDU notification reject request / response",
+    "code": "29 / 30",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "PDU notification reject request",
+      "PDU notification reject response"
+    ],
+    "keywords": [
+      "PNRR",
+      "PNRR",
+      "PDU notification reject request",
+      "PDU notification reject response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "RCR",
+    "name": "Relocation cancel request / response",
+    "code": "56 / 57",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Relocation cancel request",
+      "Relocation cancel response"
+    ],
+    "keywords": [
+      "RCR",
+      "RCR",
+      "Relocation cancel request",
+      "Relocation cancel response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "RIR",
+    "name": "RAN Information Relay",
+    "code": "70",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [],
+    "keywords": [
+      "RIR",
+      "RAN Information Relay"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "RR",
+    "name": "Redirection request / response",
+    "code": "6 / 7",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Redirection request",
+      "Redirection response"
+    ],
+    "keywords": [
+      "RR",
+      "RR",
+      "Redirection request",
+      "Redirection response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "SCA",
+    "name": "SGSN context acknowledgement",
+    "code": "52",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [],
+    "keywords": [
+      "SCA",
+      "SGSN context acknowledgement"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "SCR",
+    "name": "SGSN context request / response",
+    "code": "50 / 51",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "SGSN context request",
+      "SGSN context response"
+    ],
+    "keywords": [
+      "SCR",
+      "SCR",
+      "SGSN context request",
+      "SGSN context response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "SEHN",
+    "name": "Supported extension header notification",
+    "code": "31",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [],
+    "keywords": [
+      "SEHN",
+      "Supported extension header notification"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "SRIFGR",
+    "name": "Send routing information for GPRS request / response",
+    "code": "32 / 33",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Send routing information for GPRS request",
+      "Send routing information for GPRS response"
+    ],
+    "keywords": [
+      "SRIFGR",
+      "SRIFGR",
+      "Send routing information for GPRS request",
+      "Send routing information for GPRS response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "UPCR",
+    "name": "Update PDP context request / response",
+    "code": "18 / 19",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "Update PDP context request",
+      "Update PDP context response"
+    ],
+    "keywords": [
+      "UPCR",
+      "UPCR",
+      "Update PDP context request",
+      "Update PDP context response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "URQR",
+    "name": "UE Registration Query Request / Response",
+    "code": "61 / 62",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [
+      "UE Registration Query Request",
+      "UE Registration Query Response"
+    ],
+    "keywords": [
+      "URQR",
+      "URQR",
+      "UE Registration Query Request",
+      "UE Registration Query Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "VNS",
+    "name": "Version not supported",
+    "code": "3",
+    "protocol": "GTPv1-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.060",
+    "related": [],
+    "keywords": [
+      "VNS",
+      "Version not supported"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "AMN",
+    "name": "Alert MME Notification / Acknowledge",
+    "code": "153 / 154",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Alert MME Notification",
+      "Alert MME Acknowledge"
+    ],
+    "keywords": [
+      "AMN",
+      "AMA",
+      "Alert MME Notification",
+      "Alert MME Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "BRC",
+    "name": "Bearer Resource Command / Failure Indication",
+    "code": "68 / 69",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S11/S4",
+      "S5/S8"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Bearer Resource Command",
+      "Bearer Resource Failure Indication"
+    ],
+    "keywords": [
+      "BRC",
+      "BRFI",
+      "Bearer Resource Command",
+      "Bearer Resource Failure Indication"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "CA",
+    "name": "Context Acknowledge",
+    "code": "132",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3/10/S16"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [],
+    "keywords": [
+      "CA",
+      "Context Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "CBR",
+    "name": "Create Bearer Request / Response",
+    "code": "95 / 96",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S2a",
+      "S2b",
+      "S4/S11",
+      "S5/S8"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Create Bearer Request",
+      "Create Bearer Response"
+    ],
+    "keywords": [
+      "CBR",
+      "CBR",
+      "Create Bearer Request",
+      "Create Bearer Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "CFTR",
+    "name": "Create Forwarding Tunnel Request / Response",
+    "code": "160 / 161",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S11"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Create Forwarding Tunnel Request",
+      "Create Forwarding Tunnel Response"
+    ],
+    "keywords": [
+      "CFTR",
+      "CFTR",
+      "Create Forwarding Tunnel Request",
+      "Create Forwarding Tunnel Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "CIDFTR",
+    "name": "Create Indirect Data Forwarding Tunnel Request / Response",
+    "code": "166 / 167",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S11"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Create Indirect Data Forwarding Tunnel Request",
+      "Create Indirect Data Forwarding Tunnel Response"
+    ],
+    "keywords": [
+      "CIDFTR",
+      "CIDFTR",
+      "Create Indirect Data Forwarding Tunnel Request",
+      "Create Indirect Data Forwarding Tunnel Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "CNR",
+    "name": "Change Notification Request / Response",
+    "code": "38 / 39",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S4/S11",
+      "S5/S8"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Change Notification Request",
+      "Change Notification Response"
+    ],
+    "keywords": [
+      "CNR",
+      "CNR",
+      "Change Notification Request",
+      "Change Notification Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "CPI",
+    "name": "CS Paging Indication",
+    "code": "151",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [],
+    "keywords": [
+      "CPI",
+      "CS Paging Indication"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "CR",
+    "name": "Context Request / Response",
+    "code": "130 / 131",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3/10/S16"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Context Request",
+      "Context Response"
+    ],
+    "keywords": [
+      "CR",
+      "CR",
+      "Context Request",
+      "Context Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "CSR",
+    "name": "Create Session Request / Response",
+    "code": "32 / 33",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S4/S11",
+      "S5/S8"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Create Session Request",
+      "Create Session Response"
+    ],
+    "keywords": [
+      "CSR",
+      "CSR",
+      "Create Session Request",
+      "Create Session Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "CTT",
+    "name": "Configuration Transfer Tunnel",
+    "code": "141",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3/10/S16"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [],
+    "keywords": [
+      "CTT",
+      "Configuration Transfer Tunnel"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "DBC",
+    "name": "Delete Bearer Command / Failure Indication",
+    "code": "66 / 67",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S11",
+      "S5/S8"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Delete Bearer Command",
+      "Delete Bearer Failure Indication"
+    ],
+    "keywords": [
+      "DBC",
+      "DBFI",
+      "Delete Bearer Command",
+      "Delete Bearer Failure Indication"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "DBR",
+    "name": "Delete Bearer Request / Response",
+    "code": "99 / 100",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S2a",
+      "S2b",
+      "S4/S11",
+      "S5/S8"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Delete Bearer Request",
+      "Delete Bearer Response"
+    ],
+    "keywords": [
+      "DBR",
+      "DBR",
+      "Delete Bearer Request",
+      "Delete Bearer Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "DDN",
+    "name": "Downlink Data Notification / Acknowledgement",
+    "code": "176 / 177",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S4/S11"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Downlink Data Notification",
+      "Downlink Data Notification Acknowledgement"
+    ],
+    "keywords": [
+      "DDN",
+      "DDNA",
+      "Downlink Data Notification",
+      "Downlink Data Notification Acknowledgement"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "DDNFI",
+    "name": "Downlink Data Notification Failure Indication",
+    "code": "70",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S4/S11"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [],
+    "keywords": [
+      "DDNFI",
+      "Downlink Data Notification Failure Indication"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "DIDFTR",
+    "name": "Delete Indirect Data Forwarding Tunnel Request / Response",
+    "code": "168 / 169",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S11"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Delete Indirect Data Forwarding Tunnel Request",
+      "Delete Indirect Data Forwarding Tunnel Response"
+    ],
+    "keywords": [
+      "DIDFTR",
+      "DIDFTR",
+      "Delete Indirect Data Forwarding Tunnel Request",
+      "Delete Indirect Data Forwarding Tunnel Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "DN",
+    "name": "Detach Notification / Acknowledge",
+    "code": "149 / 150",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Detach Notification",
+      "Detach Acknowledge"
+    ],
+    "keywords": [
+      "DN",
+      "DA",
+      "Detach Notification",
+      "Detach Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "DPCSR",
+    "name": "Delete PDN Connection Set Request / Response",
+    "code": "101 / 102",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S11",
+      "S5/S8"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Delete PDN Connection Set Request",
+      "Delete PDN Connection Set Response"
+    ],
+    "keywords": [
+      "DPCSR",
+      "DPCSR",
+      "Delete PDN Connection Set Request",
+      "Delete PDN Connection Set Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "DSR",
+    "name": "Delete Session Request / Response",
+    "code": "36 / 37",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S4/S11",
+      "S5/S8"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Delete Session Request",
+      "Delete Session Response"
+    ],
+    "keywords": [
+      "DSR",
+      "DSR",
+      "Delete Session Request",
+      "Delete Session Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "ER",
+    "name": "Echo Request / Response",
+    "code": "1 / 2",
+    "protocol": "GTPv2-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Echo Request",
+      "Echo Response"
+    ],
+    "keywords": [
+      "ER",
+      "ER",
+      "Echo Request",
+      "Echo Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "FACN",
+    "name": "Forward Access Context Notification / Acknowledge",
+    "code": "137 / 138",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3/10/S16"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Forward Access Context Notification",
+      "Forward Access Context Acknowledge"
+    ],
+    "keywords": [
+      "FACN",
+      "FACA",
+      "Forward Access Context Notification",
+      "Forward Access Context Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "FRCN",
+    "name": "Forward Relocation Complete Notification / Acknowledge",
+    "code": "135 / 136",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3/10/S16"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Forward Relocation Complete Notification",
+      "Forward Relocation Complete Acknowledge"
+    ],
+    "keywords": [
+      "FRCN",
+      "FRCA",
+      "Forward Relocation Complete Notification",
+      "Forward Relocation Complete Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "FRR",
+    "name": "Forward Relocation Request / Response",
+    "code": "133 / 134",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3/10/S16"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Forward Relocation Request",
+      "Forward Relocation Response"
+    ],
+    "keywords": [
+      "FRR",
+      "FRR",
+      "Forward Relocation Request",
+      "Forward Relocation Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "IR",
+    "name": "Identification Request / Response",
+    "code": "128 / 129",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3/10/S16"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Identification Request",
+      "Identification Response"
+    ],
+    "keywords": [
+      "IR",
+      "IR",
+      "Identification Request",
+      "Identification Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "ISI",
+    "name": "ISR Status Indication",
+    "code": "157",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [],
+    "keywords": [
+      "ISI",
+      "ISR Status Indication"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "MABR",
+    "name": "Modify Access Bearers Request / Response",
+    "code": "211 / 212",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S11"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Modify Access Bearers Request",
+      "Modify Access Bearers Response"
+    ],
+    "keywords": [
+      "MABR",
+      "MABR",
+      "Modify Access Bearers Request",
+      "Modify Access Bearers Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "MBC",
+    "name": "Modify Bearer Command / Failure Indication",
+    "code": "64 / 65",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S11/S4",
+      "S5/S8"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Modify Bearer Command",
+      "Modify Bearer Failure Indication"
+    ],
+    "keywords": [
+      "MBC",
+      "MBFI",
+      "Modify Bearer Command",
+      "Modify Bearer Failure Indication"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "MBR",
+    "name": "Modify Bearer Request / Response",
+    "code": "34 / 35",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S4/S11",
+      "S5/S8"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Modify Bearer Request",
+      "Modify Bearer Response"
+    ],
+    "keywords": [
+      "MBR",
+      "MBR",
+      "Modify Bearer Request",
+      "Modify Bearer Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "MSSR",
+    "name": "MBMS Session Start Request / Response",
+    "code": "231 / 232",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "Sm",
+      "Sn"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "MBMS Session Start Request",
+      "MBMS Session Start Response"
+    ],
+    "keywords": [
+      "MSSR",
+      "MSSR",
+      "MBMS Session Start Request",
+      "MBMS Session Start Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "MSSR",
+    "name": "MBMS Session Stop Request / Response",
+    "code": "235 / 236",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "Sm",
+      "Sn"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "MBMS Session Stop Request",
+      "MBMS Session Stop Response"
+    ],
+    "keywords": [
+      "MSSR",
+      "MSSR",
+      "MBMS Session Stop Request",
+      "MBMS Session Stop Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "MSUR",
+    "name": "MBMS Session Update Request / Response",
+    "code": "233 / 234",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "Sm",
+      "Sn"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "MBMS Session Update Request",
+      "MBMS Session Update Response"
+    ],
+    "keywords": [
+      "MSUR",
+      "MSUR",
+      "MBMS Session Update Request",
+      "MBMS Session Update Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "NAR",
+    "name": "Node Alive Request / Response",
+    "code": "4 / 5",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S101"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Node Alive Request",
+      "Node Alive Response"
+    ],
+    "keywords": [
+      "NAR",
+      "NAR",
+      "Node Alive Request",
+      "Node Alive Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "PDTN",
+    "name": "PGW Downlink Triggering Notification / Acknowledge",
+    "code": "103 / 104",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S4/S11",
+      "S5"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "PGW Downlink Triggering Notification",
+      "PGW Downlink Triggering Acknowledge"
+    ],
+    "keywords": [
+      "PDTN",
+      "PDTA",
+      "PGW Downlink Triggering Notification",
+      "PGW Downlink Triggering Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "PRN",
+    "name": "PGW Restart Notification / Acknowledge",
+    "code": "179 / 180",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S4/S11"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "PGW Restart Notification",
+      "PGW Restart Notification Acknowledge"
+    ],
+    "keywords": [
+      "PRN",
+      "PRNA",
+      "PGW Restart Notification",
+      "PGW Restart Notification Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "RABR",
+    "name": "Release Access Bearers Request / Response",
+    "code": "170 / 171",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S11"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Release Access Bearers Request",
+      "Release Access Bearers Response"
+    ],
+    "keywords": [
+      "RABR",
+      "RABR",
+      "Release Access Bearers Request",
+      "Release Access Bearers Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "RCR",
+    "name": "Relocation Cancel Request / Response",
+    "code": "139 / 140",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3/10/S16"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Relocation Cancel Request",
+      "Relocation Cancel Response"
+    ],
+    "keywords": [
+      "RCR",
+      "RCR",
+      "Relocation Cancel Request",
+      "Relocation Cancel Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "RIR",
+    "name": "RAN Information Relay",
+    "code": "152",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [],
+    "keywords": [
+      "RIR",
+      "RAN Information Relay"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "RN",
+    "name": "Resume Notification / Acknowledge",
+    "code": "164 / 165",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S11"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Resume Notification",
+      "Resume Acknowledge"
+    ],
+    "keywords": [
+      "RN",
+      "RA",
+      "Resume Notification",
+      "Resume Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "RR",
+    "name": "Redirection Request / Response",
+    "code": "6 / 7",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S101"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Redirection Request",
+      "Redirection Response"
+    ],
+    "keywords": [
+      "RR",
+      "RR",
+      "Redirection Request",
+      "Redirection Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "RURN",
+    "name": "Remote UE Report Notification / Acknowledge",
+    "code": "40 / 41",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S11",
+      "S5/S8"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Remote UE Report Notification",
+      "Remote UE Report Acknowledge"
+    ],
+    "keywords": [
+      "RURN",
+      "RURA",
+      "Remote UE Report Notification",
+      "Remote UE Report Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "SCTPCN",
+    "name": "SRVCC CS to PS Complete Notification / Acknowledge",
+    "code": "241 / 242",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "Sv"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "SRVCC CS to PS Complete Notification",
+      "SRVCC CS to PS Complete Acknowledge"
+    ],
+    "keywords": [
+      "SCTPCN",
+      "SCTPCA",
+      "SRVCC CS to PS Complete Notification",
+      "SRVCC CS to PS Complete Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "SCTPCN",
+    "name": "SRVCC CS to PS Cancel Notification / Acknowledge",
+    "code": "243 / 244",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "Sv"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "SRVCC CS to PS Cancel Notification",
+      "SRVCC CS to PS Cancel Acknowledge"
+    ],
+    "keywords": [
+      "SCTPCN",
+      "SCTPCA",
+      "SRVCC CS to PS Cancel Notification",
+      "SRVCC CS to PS Cancel Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "SCTPR",
+    "name": "SRVCC CS to PS Request / Response",
+    "code": "31 / 240",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "Sv"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "SRVCC CS to PS Request",
+      "SRVCC CS to PS Response"
+    ],
+    "keywords": [
+      "SCTPR",
+      "SCTPR",
+      "SRVCC CS to PS Request",
+      "SRVCC CS to PS Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "SN",
+    "name": "Suspend Notification / Acknowledge",
+    "code": "162 / 163",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S11"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Suspend Notification",
+      "Suspend Acknowledge"
+    ],
+    "keywords": [
+      "SN",
+      "SA",
+      "Suspend Notification",
+      "Suspend Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "SPI",
+    "name": "Stop Paging Indication",
+    "code": "73",
+    "protocol": "GTPv2-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.274",
+    "related": [],
+    "keywords": [
+      "SPI",
+      "Stop Paging Indication"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "SPTCCN",
+    "name": "SRVCC PS to CS Complete Notification / Acknowledge",
+    "code": "27 / 28",
+    "protocol": "GTPv2-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "SRVCC PS to CS Complete Notification",
+      "SRVCC PS to CS Complete Acknowledge"
+    ],
+    "keywords": [
+      "SPTCCN",
+      "SPTCCA",
+      "SRVCC PS to CS Complete Notification",
+      "SRVCC PS to CS Complete Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "SPTCCN",
+    "name": "SRVCC PS to CS Cancel Notification / Acknowledge",
+    "code": "29 / 30",
+    "protocol": "GTPv2-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "SRVCC PS to CS Cancel Notification",
+      "SRVCC PS to CS Cancel Acknowledge"
+    ],
+    "keywords": [
+      "SPTCCN",
+      "SPTCCA",
+      "SRVCC PS to CS Cancel Notification",
+      "SRVCC PS to CS Cancel Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "SPTCR",
+    "name": "SRVCC PS to CS Request / Response",
+    "code": "25 / 26",
+    "protocol": "GTPv2-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "SRVCC PS to CS Request",
+      "SRVCC PS to CS Response"
+    ],
+    "keywords": [
+      "SPTCR",
+      "SPTCR",
+      "SRVCC PS to CS Request",
+      "SRVCC PS to CS Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "TSA",
+    "name": "Trace Session Activation",
+    "code": "71",
+    "protocol": "GTPv2-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.274",
+    "related": [],
+    "keywords": [
+      "TSA",
+      "Trace Session Activation"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "TSD",
+    "name": "Trace Session Deactivation",
+    "code": "72",
+    "protocol": "GTPv2-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.274",
+    "related": [],
+    "keywords": [
+      "TSD",
+      "Trace Session Deactivation"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "UAN",
+    "name": "UE Activity Notification / Acknowledge",
+    "code": "155 / 156",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "UE Activity Notification",
+      "UE Activity Acknowledge"
+    ],
+    "keywords": [
+      "UAN",
+      "UAA",
+      "UE Activity Notification",
+      "UE Activity Acknowledge"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "UBR",
+    "name": "Update Bearer Request / Response",
+    "code": "97 / 98",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S2a",
+      "S2b",
+      "S4/S11",
+      "S5/S8"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Update Bearer Request",
+      "Update Bearer Response"
+    ],
+    "keywords": [
+      "UBR",
+      "UBR",
+      "Update Bearer Request",
+      "Update Bearer Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "UPCSR",
+    "name": "Update PDN Connection Set Request / Response",
+    "code": "200 / 201",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S5/S8"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "Update PDN Connection Set Request",
+      "Update PDN Connection Set Response"
+    ],
+    "keywords": [
+      "UPCSR",
+      "UPCSR",
+      "Update PDN Connection Set Request",
+      "Update PDN Connection Set Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "URQR",
+    "name": "UE Registration Query Request / Response",
+    "code": "158 / 159",
+    "protocol": "GTPv2-C",
+    "interfaces": [
+      "S3"
+    ],
+    "spec": "3GPP TS 29.274",
+    "related": [
+      "UE Registration Query Request",
+      "UE Registration Query Response"
+    ],
+    "keywords": [
+      "URQR",
+      "URQR",
+      "UE Registration Query Request",
+      "UE Registration Query Response"
+    ],
+    "category": "GTP Command"
+  },
+  {
+    "abbrev": "VNSI",
+    "name": "Version Not Supported Indication",
+    "code": "3",
+    "protocol": "GTPv2-C",
+    "interfaces": [],
+    "spec": "3GPP TS 29.274",
+    "related": [],
+    "keywords": [
+      "VNSI",
+      "Version Not Supported Indication"
+    ],
+    "category": "GTP Command"
+  }
+]
