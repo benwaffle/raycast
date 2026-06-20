@@ -454,6 +454,56 @@
   },
   {
     "category": "Interface",
+    "abbrev": "Iq",
+    "name": "P-CSCF (IMS-ALG) ↔ IMS-AGW",
+    "family": "IMS",
+    "protocol": "H.248 / Megaco",
+    "spec": "3GPP TS 23.334",
+    "summary": "Lets the P-CSCF (IMS-ALG), as realized in an access SBC, control the IMS Access Gateway: gate/pinhole control, NAT traversal, media anchoring and transcoding for access-side bearers.",
+    "related": ["Gm", "Mw"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Mx",
+    "name": "I/S-CSCF / BGCF ↔ IBCF",
+    "family": "IMS",
+    "protocol": "SIP",
+    "spec": "3GPP TS 24.229",
+    "summary": "SIP interface between the core CSCFs (or BGCF) and the IBCF, used to route sessions toward another IMS network through the interconnection border.",
+    "related": ["Mw", "Ici"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Ici",
+    "name": "IBCF ↔ IBCF (II-NNI signalling)",
+    "family": "IMS",
+    "protocol": "SIP",
+    "spec": "3GPP TS 29.165",
+    "summary": "Inter-IMS network-to-network SIP signalling interface between the IBCFs of two interconnected operators. Izi carries the corresponding media.",
+    "related": ["Izi", "Mx"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Izi",
+    "name": "TrGW ↔ TrGW (II-NNI media)",
+    "family": "IMS",
+    "protocol": "RTP / RTCP",
+    "spec": "3GPP TS 29.165",
+    "summary": "Inter-IMS network-to-network media interface carrying RTP between the Transition Gateways of interconnected operators; the bearer counterpart of Ici.",
+    "related": ["Ici", "Ix"]
+  },
+  {
+    "category": "Interface",
+    "abbrev": "Ix",
+    "name": "IBCF ↔ TrGW",
+    "family": "IMS",
+    "protocol": "H.248 / Megaco",
+    "spec": "3GPP TS 29.238",
+    "summary": "Control interface by which the IBCF, as realized in an interconnection SBC, drives the Transition Gateway for media gating, NAPT and transcoding at the network border.",
+    "related": ["Izi", "Mx"]
+  },
+  {
+    "category": "Interface",
     "abbrev": "Cx",
     "name": "I/S-CSCF ↔ HSS (IMS)",
     "family": "IMS",

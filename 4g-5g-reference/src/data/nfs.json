@@ -421,6 +421,28 @@
   },
   {
     "category": "Network Function",
+    "abbrev": "ASBC",
+    "name": "Access Session Border Controller",
+    "family": "IMS",
+    "protocol": "SIP / RTP",
+    "spec": "3GPP TS 23.228",
+    "summary": "Session border controller at the IMS access edge, between the subscriber's access network and the IMS core. Secures and adapts SIP signalling and RTP media for VoLTE/VoNR/VoWiFi: NAT/firewall traversal, topology hiding, SIP normalization and repair, media anchoring, transcoding, QoS marking and DoS protection. Realizes the 3GPP P-CSCF (IMS-ALG) plus IMS Access Gateway (IMS-AGW, controlled over Iq); acting as the P-CSCF it is the AF toward the PCRF/PCF over Rx.",
+    "interfaces": ["Gm", "Mw", "Rx", "Iq"],
+    "related": ["P-CSCF", "ISBC"]
+  },
+  {
+    "category": "Network Function",
+    "abbrev": "ISBC",
+    "name": "Interconnection Session Border Controller",
+    "family": "IMS",
+    "protocol": "SIP / RTP",
+    "spec": "3GPP TS 23.228",
+    "summary": "Session border controller at the IMS network-to-network boundary (II-NNI), securing SIP signalling and RTP media exchanged with peer operators, IP interconnect and SIP trunks. Provides topology hiding (THIG), SIP protocol interworking and repair, transcoding, IPv4/IPv6 interworking, screening and admission control. Realizes the 3GPP IBCF (Interconnection Border Control Function, an IMS-ALG) plus Transition Gateway (TrGW, the media border controlled over Ix).",
+    "interfaces": ["Mx", "Ici", "Izi", "Ix"],
+    "related": ["S-CSCF", "I-CSCF", "ASBC"]
+  },
+  {
+    "category": "Network Function",
     "abbrev": "TAS",
     "name": "Telephony Application Server (MMTel AS)",
     "family": "IMS",
