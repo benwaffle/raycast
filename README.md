@@ -12,6 +12,8 @@ Search across:
 
 Each result shows the definition, the protocol, the command/AVP code, the associated interface(s) and the spec reference. Filter by category with the dropdown, and toggle the detail panel with `⌘D`.
 
+Typing a number looks entries up by code: exact command/AVP code matches first (`280` → DWR/DWA and the Proxy-Host AVP), then codes it prefixes, then enumerated values (`5003` → Result-Code / DIAMETER_AUTHORIZATION_REJECTED).
+
 ## Where the data comes from
 
 Numeric codes and official names are not hand-typed — they are extracted from
