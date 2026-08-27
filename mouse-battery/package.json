@@ -1,0 +1,38 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "mouse-battery",
+  "title": "Mouse Battery",
+  "description": "Shows Logitech wireless mouse battery level in the menu bar",
+  "icon": "icon.png",
+  "author": "beniofel",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "mouse-battery",
+      "title": "Mouse Battery",
+      "description": "Logitech mouse battery level in the menu bar",
+      "mode": "menu-bar",
+      "interval": "10m"
+    },
+    {
+      "name": "mouse-battery-status",
+      "title": "Mouse Battery Status",
+      "description": "Battery level as a subtitle in the root search; Enter refreshes",
+      "mode": "no-view",
+      "interval": "10m"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.94.0",
+    "@raycast/utils": "^1.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "typescript": "^5.7.0"
+  },
+  "scripts": {
+    "dev": "ray develop",
+    "build": "ray build -e dist"
+  }
+}
