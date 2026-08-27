@@ -2,18 +2,11 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "mouse-battery",
   "title": "Mouse Battery",
-  "description": "Shows Logitech wireless mouse battery level in the menu bar",
+  "description": "Shows Logitech wireless mouse battery level in Raycast search",
   "icon": "icon.png",
   "author": "beniofel",
   "license": "MIT",
   "commands": [
-    {
-      "name": "mouse-battery",
-      "title": "Mouse Battery",
-      "description": "Logitech mouse battery level in the menu bar",
-      "mode": "menu-bar",
-      "interval": "10m"
-    },
     {
       "name": "mouse-battery-status",
       "title": "Mouse Battery Status",
