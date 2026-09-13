@@ -1,4 +1,4 @@
-import { Action, ActionPanel, Color, Icon, List } from "@raycast/api";
+import { Action, ActionPanel, Color, Icon, Keyboard, List } from "@raycast/api";
 import { useMemo, useState } from "react";
 import { CATEGORIES, Category, Entry, ENTRIES, EnumValue, searchKeywords } from "./data";
 
@@ -151,19 +151,22 @@ export default function Command() {
             <Action.CopyToClipboard
               title="Copy Name"
               content={entry.name}
-              shortcut={{ modifiers: ["cmd"], key: "." }}
+              shortcut={Keyboard.Shortcut.Common.CopyName}
             />
             {entry.code ? (
               <Action.CopyToClipboard
                 title="Copy Code"
                 content={entry.code}
-                shortcut={{ modifiers: ["cmd", "shift"], key: "." }}
+                shortcut={{
+                  macOS: { modifiers: ["cmd", "shift"], key: "." },
+                  Windows: { modifiers: ["ctrl", "shift"], key: "." },
+                }}
               />
             ) : null}
             <Action
               title="Toggle Details"
               icon={Icon.Sidebar}
-              shortcut={{ modifiers: ["cmd"], key: "d" }}
+              shortcut={{ macOS: { modifiers: ["cmd"], key: "d" }, Windows: { modifiers: ["ctrl"], key: "d" } }}
               onAction={() => setShowingDetail((v) => !v)}
             />
           </ActionPanel>
