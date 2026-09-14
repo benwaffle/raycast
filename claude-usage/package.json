@@ -2,7 +2,7 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "claude-usage",
   "title": "Claude Usage",
-  "description": "Shows Claude subscription usage limits (5-hour and weekly) in the menu bar",
+  "description": "Shows Claude subscription usage limits (5-hour, weekly) and usage credit spend in the menu bar",
   "icon": "icon.png",
   "author": "beniofel",
   "license": "MIT",
@@ -10,7 +10,7 @@
     {
       "name": "claude-usage",
       "title": "Claude Usage",
-      "description": "Claude 5-hour and weekly limit utilization in the menu bar",
+      "description": "Claude 5-hour and weekly limit utilization plus usage credit spend in the menu bar",
       "mode": "menu-bar",
       "interval": "10m"
     }
