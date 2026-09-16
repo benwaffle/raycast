@@ -239,7 +239,11 @@ export default function Command() {
       : "…";
 
   return (
-    <MenuBarExtra icon="claude-menubar.png" title={title} isLoading={isLoading}>
+    <MenuBarExtra
+      icon={{ source: { light: "claude-menubar-light.png", dark: "claude-menubar-dark.png" } }}
+      title={title}
+      isLoading={isLoading}
+    >
       {windows.map((w) => (
         <MenuBarExtra.Item
           key={w.key}
